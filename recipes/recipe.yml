@@ -34,7 +34,7 @@ modules:
 
   - type: dnf
     repos:
-      nonfree: rpmfusion #this installs both free and nonfree repos + updates, blue build understands the logic, this confused me when I tried it before
+      nonfree: rpmfusion # this installs both free and nonfree repos + updates, thanks to birdietx and gmpinder for this whole block
       cleanup: true
     install:
       packages:

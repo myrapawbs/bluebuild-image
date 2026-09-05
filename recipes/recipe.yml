@@ -32,13 +32,9 @@ modules:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-  - type: dnf
-    repos:
-      nonfree: rpmfusion # this installs both free and nonfree repos + updates, thanks to birdietx and gmpinder for this whole block
-      cleanup: true
+  - type: akmods
     install:
-      packages:
-      - broadcom-wl
+      - wl
 
   - type: default-flatpaks
     configurations:

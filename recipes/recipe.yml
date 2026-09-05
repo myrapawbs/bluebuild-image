@@ -32,6 +32,14 @@ modules:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
+  - type: dnf
+    repos:
+      nonfree: rpmfusion #this installs both free and nonfree repos + updates, blue build understands the logic, this confused me when I tried it before
+      cleanup: true
+    install:
+      packages:
+      - broadcom-wl
+
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)

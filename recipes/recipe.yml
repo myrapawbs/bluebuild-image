@@ -32,10 +32,13 @@ modules:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
-  - type: akmods
-    base: main
+- type: dnf
+    repos:
+      nonfree: rpmfusion 
+      cleanup: true
     install:
-      - wl
+      packages:
+      - akmod-wl
 
   - type: default-flatpaks
     configurations:
